@@ -4,16 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CompileFunctions
+namespace RunComplier
 {
     public class Functionality
-    {
-       
-
-        private void readChar(ref int IX, ref string sentence, ref string testChar, ref int inputType)
+    {       
+        internal void readChar(int IX, string sentence)
         {
-
-            testChar = sentence.Substring(IX, 1);
+            string testChar = sentence.Substring(IX, 1);
             IX = IX + 1;
 
             if ((testChar.CompareTo("|") == 0) |
@@ -32,7 +29,7 @@ namespace CompileFunctions
                 (testChar.CompareTo(",") == 0) |
                 (testChar.CompareTo("=") == 0))
             {
-                inputType = 5; // delimeter
+                GlobalStore.FunctionType = 5;// delimeter
             }
             else
             {
@@ -47,23 +44,19 @@ namespace CompileFunctions
                     (testChar.CompareTo("8") == 0) |
                     (testChar.CompareTo("9") == 0))
                 {
-                    inputType = 3; // numeric              
+                    GlobalStore.FunctionType = 3; // numeric              
                 } // end if compareTo Numeric
                 else
                 {
-                    if ((testChar.CompareTo(" ") == 0)) inputType = 6;
+                    if ((testChar.CompareTo(" ") == 0)) GlobalStore.FunctionType = 6;
                     else
-                        if ((testChar.CompareTo(";") == 0)) inputType = 7;
+                        if ((testChar.CompareTo(";") == 0)) GlobalStore.FunctionType = 7;
                     else
                     {
-                        inputType = 1; // alpha
+                        GlobalStore.FunctionType = 1; // alpha
                     } // end alpha
                 } // end else
-
-
             } // end if
-
-
         } // end readChar
     }
 }

@@ -9,8 +9,17 @@ namespace RunComplier
     class Program
     {
         static void Main(string[] args)
-        {
-            //call functionality class
+        {            
+            Functionality func = new Functionality();
+            GlobalStore.FunctionType = 0;
+
+            string testString = "th!b2ne";
+
+            for (int i = 0; i < testString.Length; i++)
+            {
+                func.readChar(i, testString);
+            }
+            //
             Console.ReadKey();           
         }
     }
