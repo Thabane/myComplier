@@ -10,6 +10,7 @@ namespace RunComplier
     {
         static void Main(string[] args)
         {
+            //call functionality class
             Console.ReadKey();           
         }
     }
