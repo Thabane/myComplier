@@ -83,7 +83,7 @@ namespace RunComplier
                     IX = x;
                     x = 27;
                 }
-                 GlobalStore.CharInWordCount = numVal[IX];
+                 GlobalStore.CharIntValue = numVal[IX];
             }
         }
     }
