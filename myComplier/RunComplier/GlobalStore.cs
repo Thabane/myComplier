@@ -9,6 +9,7 @@ namespace RunComplier
     public static class GlobalStore
     {
         private static int functionType;
+        private static int charInWordCount;
 
         public static int FunctionType
         {
@@ -16,10 +17,10 @@ namespace RunComplier
             set { functionType = value; }
         }
 
-        //public static getFunction()
-        //{
-        //    return 
-        //}
-
+        public static int CharInWordCount
+        {
+            get { return charInWordCount; }
+            set { charInWordCount = value; }
+        }
     }
 }

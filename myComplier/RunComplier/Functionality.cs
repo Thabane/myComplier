@@ -26,6 +26,7 @@ namespace RunComplier
                 (testChar.CompareTo("&") == 0) |
                 (testChar.CompareTo("(") == 0) |
                 (testChar.CompareTo(")") == 0) |
+                (testChar.CompareTo("!") == 0) |
                 (testChar.CompareTo(",") == 0) |
                 (testChar.CompareTo("=") == 0))
             {
@@ -45,7 +46,7 @@ namespace RunComplier
                     (testChar.CompareTo("9") == 0))
                 {
                     GlobalStore.FunctionType = 3; // numeric              
-                } // end if compareTo Numeric
+                }
                 else
                 {
                     if ((testChar.CompareTo(" ") == 0)) GlobalStore.FunctionType = 6;
@@ -53,10 +54,37 @@ namespace RunComplier
                         if ((testChar.CompareTo(";") == 0)) GlobalStore.FunctionType = 7;
                     else
                     {
-                        GlobalStore.FunctionType = 1; // alpha
-                    } // end alpha
-                } // end else
-            } // end if
-        } // end readChar
+                        GlobalStore.FunctionType = 1;
+                    }
+                }
+            }
+        }
+
+        internal void PrintResponse(string text)
+        {
+            Console.WriteLine(text);
+        }
+
+        internal string ReadInput()
+        {
+            return Console.ReadLine().ToString();
+        }
+
+        internal void convertCharToInt(string alpha)
+        {
+            string[] alphaVal = { "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z" };
+            int[] numVal = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26 };
+            int IX = 0;
+
+            for (int x = 0; x < 26; x++)
+            {
+                if (alpha == alphaVal[x])
+                {
+                    IX = x;
+                    x = 27;
+                }
+                 GlobalStore.CharInWordCount = numVal[IX];
+            }
+        }
     }
 }

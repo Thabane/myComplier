@@ -13,13 +13,16 @@ namespace RunComplier
             Functionality func = new Functionality();
             GlobalStore.FunctionType = 0;
 
-            string testString = "th!b2ne";
+            string testString = "th!@b2ne ;";
 
             for (int i = 0; i < testString.Length; i++)
             {
                 func.readChar(i, testString);
+                func.PrintResponse(GlobalStore.FunctionType.ToString());
             }
-            //
+            //Console.WriteLine("Write Something");
+            //string stuff = func.ReadInput();
+            //func.PrintResponse(stuff);
             Console.ReadKey();           
         }
     }
