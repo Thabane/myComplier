@@ -23,8 +23,7 @@ namespace RunComplier
             //Console.WriteLine("Write Something");
             //string stuff = func.ReadInput();
             //func.PrintResponse(stuff);
-            Console.ReadKey();           
-            Console.ReadKey();           
+            Console.ReadKey();                    
         }
     }
 }
