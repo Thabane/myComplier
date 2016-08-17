@@ -24,6 +24,7 @@ namespace RunComplier
             //string stuff = func.ReadInput();
             //func.PrintResponse(stuff);
             Console.ReadKey();           
+            Console.ReadKey();           
         }
     }
 }
