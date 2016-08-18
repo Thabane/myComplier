@@ -1,5 +1,5 @@
 language: csharp
 solution: myComplier.sln
 install:
-- nuget restore solution-name.sln
+- nuget restore myComplier.sln
 
