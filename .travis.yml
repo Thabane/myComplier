@@ -1,7 +1,5 @@
 language: csharp
 solution: myComplier.sln
-install:
-- nuget restore myComplier.sln
 script:
 - xbuild myComplier.sln
 
