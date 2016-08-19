@@ -1,5 +1,5 @@
 language: csharp
 solution: myComplier.sln
 script:
-- xbuild myComplier.sln
+- xbuild /p:Configuration=Release myComplier.sln
 
