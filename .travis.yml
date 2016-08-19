@@ -1,7 +1,6 @@
 language: csharp
 solution: myComplier.sln
 install:
-- sudo apt-get install mono-devel mono-gmcs nunit-console
 - nuget restore myComplier.sln
 script:
 - xbuild myComplier.sln
