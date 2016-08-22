@@ -1,6 +1,3 @@
 language: csharp
-solution: myComplier.sln
-sudo: false
-script:
-- xbuild /p:Configuration=Release myComplier.sln
+
 
