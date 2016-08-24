@@ -1,2 +1,5 @@
 language: csharp
-solution: myComplier.sln
+sudo: false
+script:
+- xbuild /p:Configuration=Debug myComplier\myComplier.sln
+
