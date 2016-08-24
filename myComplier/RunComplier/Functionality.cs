@@ -86,5 +86,15 @@ namespace RunComplier
                  GlobalStore.CharIntValue = numVal[IX];
             }
         }
+
+        public int Adding(int input1, int input2)
+        {
+            return input1 + input2;
+        }
+
+        public int Subtract(int input1, int input2)
+        {
+            return input1 - input2;
+        }
     }
 }
